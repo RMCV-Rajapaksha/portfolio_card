@@ -25,17 +25,22 @@ function App() {
           </div>
           {isActive && (
  <div className='p-4 w-275 bg-navBar rounded-lg fixed top-24 right-16 flex flex-col items-center justify-evenly gap-6'>
-    <a href="#home" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>Home</a>
+    <a href="#home" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out' onClick={()=>setIsActive(false)}>Home</a>
     <a href="#about" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>About</a>
     <a href="#projects" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>Projects</a>
     <a href="#contact" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>Contact</a>
-    <a href="#" className='ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out '>Download</a>
+    <a href="#" className=' text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out '>Download</a>
   </div>
 )}
         </div>
       </nav>
       <div className='relative '>
         <Spline scene="https://prod.spline.design/pfqJo4JN2jZcqmt3/scene.splinecode" />
+        <div className='absolute bottom-10 w-full justify-center items-center flex'>
+          <div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl'>
+            <p className='text-white'>Press and drag to orbit</p>
+          </div>
+        </div>
       </div>
     </div>
   );
