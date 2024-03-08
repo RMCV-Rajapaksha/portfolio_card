@@ -25,7 +25,7 @@ function App() {
           <div className='hidden md:flex items-center gap-6 ml-6 flex-1'>
             <a href="#home" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>Home</a>
             <a href="#about" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>About</a>
-            <a href="#projects" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>skills</a>
+            <a href="#skill" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>skills</a>
             <a href="#projects" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>Projects</a>
             <a href="#contact" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>Contact</a>
             <a href="#" className='ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border-textBase  border-2 px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out'>
@@ -49,7 +49,7 @@ function App() {
   className='p-4 w-275 bg-navBar rounded-lg fixed top-24 right-16 flex flex-col items-center justify-evenly gap-6'>
     <a href="#home" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out' onClick={()=>setIsActive(false)}>Home</a>
     <a href="#about" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'  onClick={()=>setIsActive(false)}>About</a>
-    <a href="#about" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'  onClick={()=>setIsActive(false)}>Skills</a>
+    <a href="#skill" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'  onClick={()=>setIsActive(false)}>Skills</a>
     <a href="#projects" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'  onClick={()=>setIsActive(false)}>Projects</a>
     <a href="#contact" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'  onClick={()=>setIsActive(false)}>Contact</a>
     <motion.a 
@@ -79,13 +79,13 @@ function App() {
 <section className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 my-24' id="about">
 {/*image box*/}
 <div className='w-full h-470 flex items-center justify-center'>
-<div className='w-275 h-340 bg-emerald-200 rounded-md relative'>
+<div className='w-340 h-370 bg-emerald-200 rounded-md relative'>
   <img className='w-full h-full absolute -right-4 top-4 object-cover rounded-lg shadow-lg' src={May} alt=""/>
 </div>
 </div>
 {/*content box*/}
-<div className='w-full h-470 flex flex-col items-center justify-center pl-10 pr-10'>
-<p className='text-lg text-textBase text-center'>
+<div className='w-full h-470 flex flex-col items-center justify-center  p-10 md:pr-60'>
+<p className='text-lg text-textBase text-justify'>
 Hello, coding enthusiasts! I'm R.M.C.V Rajapaksha, an aspiring computer engineering undergraduate at the University of Ruhuna, and I'm delighted to share a bit about my coding journey with you.I'm a passionate coder who believes in the limitless possibilities of creative thinking and programming knowledge. Currently immersed in the world of computer engineering at the University of Ruhuna, my journey began with a curiosity to solve problems using the power of code.I find immense joy in coding and exploring the vast landscape of computer engineering. Whether I'm tackling complex algorithms, designing innovative solutions, or diving into the latest technologies, my motivation stems from the belief that every problem has a solution waiting to be uncovered through ingenuity and code.I find immense joy in coding and exploring the vast landscape of computer engineering. Whether I'm tackling complex algorithms, designing innovative solutions, or diving into the latest technologies, my motivation stems from the belief that every problem has a solution waiting to be uncovered through ingenuity and code.
 </p>
 <motion.button
@@ -102,7 +102,7 @@ whileTap={{scale:0.8}}
 </section>
 {/*skills section*/}
 
-<section className='flex flex-wrap items-center justify-evenly my-24 gap-4 pl-20 pr-20'>
+<section className='flex flex-wrap items-center justify-evenly my-24 gap-4 pl-20 pr-20' id='skill'>
 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">I'm Familiar With</h2>
 <div className='flex flex-row flex-wrap justify-center gap-10 mt-8 mx-4 md:mx-16'>
 
@@ -206,7 +206,7 @@ whileTap={{scale:0.8}}
     SocialLinks && SocialLinks.map((n) => (  
     <motion.a 
     whileTap={{scale:0.8}}
-    key={n.id} href='#' className='w-full md:w-auto px-3 md:px-8 py-5 border border-x-zine-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3'>
+    key={n.id} href={n.link} className='w-full md:w-auto px-3 md:px-8 py-5 border border-x-zine-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3'>
     {n.iconSrc}
     <p className='text-lg text-textBase'>{n.name}</p>
   </motion.a>))

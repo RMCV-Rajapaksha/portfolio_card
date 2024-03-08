@@ -17,13 +17,22 @@ import Postman from './images/postman.png';
 import Python from './images/python.png';
 
 
+//projects
+import Finance_app from './images/thumbnail/Finace_app.png';
+import Finance_web from './images/thumbnail/Finance_web.png';
+import Password from './images/thumbnail/Password.png';
+import Pos_Flutter from './images/thumbnail/Pos_Flutter.png';
+import Pos from './images/thumbnail/Pos.png';
+import Vision from './images/thumbnail/Vision.png';
+import Hostel from './images/thumbnail/Hostel.png';
+
 import {
   IoCodeWorking,
   IoLogoGithub,
-  IoLogoYoutube,
-  IoLogoTwitter,
+  IoLogoFacebook,
   IoLogoLinkedin,
   IoLogoWhatsapp,
+  IoLogoMedium 
 } from "react-icons/io5";
 
 
@@ -82,42 +91,49 @@ export const Projects = [
   {
     id: 1,
     name: "Food Delivery UI Mockup",
-    imageSrc: May,
+    imageSrc: Finance_web,
     techs: "React Js, Redux, Material UI",
     github: "#",
   },
   {
     id: 2,
     name: "Full Stack Social Media App ",
-    imageSrc: May,
+    imageSrc: Pos,
     techs: "React Js, Sanity, Tailwind CSS",
     github: "#",
   },
   {
     id: 3,
     name: "Travel Advisor",
-    imageSrc: May,
+    imageSrc: Password,
     techs: "React Js, Chakra UI, Google API",
     github: "#",
   },
   {
     id: 4,
     name: "Pintrest UI Clone 2.0 ",
-    imageSrc: May,
+    imageSrc: Vision,
     techs: "React Js,  Material UI",
     github: "#",
   },
   {
     id: 5,
     name: "Own Video Blog",
-    imageSrc: May,
+    imageSrc: Pos_Flutter,
     techs: "React Js, Chara UI, Firebase",
     github: "#",
   },
   {
     id: 6,
     name: "Whatsapp UI Clone",
-    imageSrc: May,
+    imageSrc: Finance_app,
+    techs: "NextJs, Firebase Auth",
+    github: "#",
+  },
+  {
+    id: 7,
+    name: "Whatsapp UI Clone",
+    imageSrc: Hostel,
     techs: "NextJs, Firebase Auth",
     github: "#",
   },
@@ -128,21 +144,7 @@ export const SocialLinks = [
     id: 1,
     iconSrc: <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />,
     name: "GitHub",
-    link: "",
-  },
-  {
-    id: 1,
-    iconSrc: <IoLogoYoutube className="text-red-500 text-3xl cursor-pointer" />,
-    name: "YouTube",
-    link: "#",
-  },
-  {
-    id: 1,
-    iconSrc: (
-      <IoLogoTwitter className="text-blue-500 text-3xl cursor-pointer" />
-    ),
-    name: "Twitter",
-    link: "#",
+    link: "https://github.com/RMCV-Rajapaksha",
   },
   {
     id: 1,
@@ -150,15 +152,30 @@ export const SocialLinks = [
       <IoLogoLinkedin className="text-blue-800 text-3xl cursor-pointer" />
     ),
     name: "LinkedIn",
-    link: "#",
+    link: "https://www.linkedin.com/in/chamara-vishvajith-09b561242/",
   },
+  {
+    id: 1,
+    iconSrc: <IoLogoMedium className="text-white text-3xl cursor-pointer" />,
+    name: "Medium",
+    link: "https://medium.com/@sch.chamara",
+  },
+  {
+    id: 1,
+    iconSrc: (
+      <IoLogoFacebook className="text-blue-500 text-3xl cursor-pointer" />
+    ),
+    name: "Facebook",
+    link: "https://www.facebook.com/vira.kuma?mibextid=ZbWKwL",
+  },
+  
   {
     id: 1,
     iconSrc: (
       <IoLogoWhatsapp className="text-green-500 text-3xl cursor-pointer" />
     ),
     name: "Whatsapp",
-    link: "#",
+    link: "https://wa.me/qr/IY6J7TAUBVOZC1",
   },
 ];
 
