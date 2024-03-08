@@ -6,6 +6,7 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 
 
+
 import May from './images/may.jpg';
 import { Experience, Projects, SocialLinks } from './data';
 
@@ -20,9 +21,13 @@ function App() {
           <div className='hidden md:flex items-center gap-6 ml-6 flex-1'>
             <a href="#home" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>Home</a>
             <a href="#about" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>About</a>
+            <a href="#projects" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>skills</a>
             <a href="#projects" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>Projects</a>
             <a href="#contact" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>Contact</a>
-            <a href="#" className='ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out '>Download</a>
+            <a href="#" className='ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border-textBase  border-2 px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out'>
+  Download
+</a>
+
           </div>
           <div className='block md:hidden ml-auto cursor-pointer'
            onClick={()=>setIsActive(!isActive)}>
@@ -32,10 +37,13 @@ function App() {
           {isActive && (
  <div className='p-4 w-275 bg-navBar rounded-lg fixed top-24 right-16 flex flex-col items-center justify-evenly gap-6'>
     <a href="#home" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out' onClick={()=>setIsActive(false)}>Home</a>
-    <a href="#about" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>About</a>
-    <a href="#projects" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>Projects</a>
-    <a href="#contact" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>Contact</a>
-    <a href="#" className=' text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out '>Download</a>
+    <a href="#about" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'  onClick={()=>setIsActive(false)}>About</a>
+    <a href="#about" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'  onClick={()=>setIsActive(false)}>Skills</a>
+    <a href="#projects" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'  onClick={()=>setIsActive(false)}>Projects</a>
+    <a href="#contact" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'  onClick={()=>setIsActive(false)}>Contact</a>
+    <a href="#" className='mx-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border-textBase border-2 px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out' onClick={() => setIsActive(false)}>
+  Download
+</a>
   </div>
 )}
         </div>
@@ -53,6 +61,7 @@ function App() {
 
       <main className='w-{80%} mt-5 '>
 {/*About section*/}
+<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">About</h2>
 <section className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 my-24' id="about">
 {/*image box*/}
 <div className='w-full h-470 flex items-center justify-center'>
@@ -61,8 +70,8 @@ function App() {
 </div>
 </div>
 {/*content box*/}
-<div className='w-full h-470 flex flex-col items-center justify-center'>
-<p className='text-lg text-textBase text-center p-20'>
+<div className='w-full h-470 flex flex-col items-center justify-center pl-10 pr-10'>
+<p className='text-lg text-textBase text-center'>
 Hello, coding enthusiasts! I'm R.M.C.V Rajapaksha, an aspiring computer engineering undergraduate at the University of Ruhuna, and I'm delighted to share a bit about my coding journey with you.I'm a passionate coder who believes in the limitless possibilities of creative thinking and programming knowledge. Currently immersed in the world of computer engineering at the University of Ruhuna, my journey began with a curiosity to solve problems using the power of code.I find immense joy in coding and exploring the vast landscape of computer engineering. Whether I'm tackling complex algorithms, designing innovative solutions, or diving into the latest technologies, my motivation stems from the belief that every problem has a solution waiting to be uncovered through ingenuity and code.I find immense joy in coding and exploring the vast landscape of computer engineering. Whether I'm tackling complex algorithms, designing innovative solutions, or diving into the latest technologies, my motivation stems from the belief that every problem has a solution waiting to be uncovered through ingenuity and code.
 </p>
 <button
@@ -79,7 +88,7 @@ Hello, coding enthusiasts! I'm R.M.C.V Rajapaksha, an aspiring computer engineer
 
 {/*timeline section*/}
 
-<section className='w-full flex items-center justify-center'>
+<section className='w-full flex items-center justify-center pl-10 pr-10'>
   <VerticalTimeline>
   {
     Experience && Experience.map((n) => (
@@ -105,7 +114,9 @@ Hello, coding enthusiasts! I'm R.M.C.V Rajapaksha, an aspiring computer engineer
 </section>
 
 {/* Project Section*/}
-<section className=' flex flex-wrap items-center justify-evenly my-24 gap-4 p-20' id='projects'>
+<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white pt-20">Projects</h2>
+<section className=' flex flex-wrap items-center justify-evenly my-24 gap-4 pl-20 pr-20' id='projects'>
+
  {Projects && Projects.map((n) => (
    <div key={n.id} className='border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out'>
    <p className='text-md text-textBase font-medium uppercase'>
@@ -116,7 +127,7 @@ Hello, coding enthusiasts! I'm R.M.C.V Rajapaksha, an aspiring computer engineer
    <div className='flex flex-1 items-center justify-between '>
      <p className='text-lg text-gray-300'>{n.techs}
      <span className='block text-sm text-gray-500'>
-       nextJs,React
+       {n.techs}
 
        </span>
        </p>
@@ -134,7 +145,27 @@ Hello, coding enthusiasts! I'm R.M.C.V Rajapaksha, an aspiring computer engineer
 
 {/*Contact Section*/}
 
-<section id="contact" className='flex flex-col items-center justify-center w-full my-24 p-20'>
+<section id="contact" className='flex flex-col items-center justify-center w-full my-24 pl-10 pr-10'>
+<div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
+
+      <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Want to talk With me? Just put an email here.I will respond as quickly as possible</p>
+      <form action="#" class="space-y-8">
+          <div>
+              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+              <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required/>
+          </div>
+          <div>
+              <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+              <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required/>
+          </div>
+          <div class="sm:col-span-2">
+              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+              <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+          </div>
+          <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
+      </form>
+  </div>
   <p className=' text-2x1 text-gray-400 capitalize'> follow me </p>
   <div className='flex items-center justify-center w-full my-4 flex-wrap  gap-4'>
   {
