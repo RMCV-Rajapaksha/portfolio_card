@@ -1,7 +1,7 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
 import { useState } from 'react';
-import {IoCodeWorking, IoMenu} from 'react-icons/io5';
+import {IoCodeWorking, IoMenu, IoLogoGithub} from 'react-icons/io5';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
@@ -66,7 +66,7 @@ function App() {
 Hello, coding enthusiasts! I'm R.M.C.V Rajapaksha, an aspiring computer engineering undergraduate at the University of Ruhuna, and I'm delighted to share a bit about my coding journey with you.I'm a passionate coder who believes in the limitless possibilities of creative thinking and programming knowledge. Currently immersed in the world of computer engineering at the University of Ruhuna, my journey began with a curiosity to solve problems using the power of code.I find immense joy in coding and exploring the vast landscape of computer engineering. Whether I'm tackling complex algorithms, designing innovative solutions, or diving into the latest technologies, my motivation stems from the belief that every problem has a solution waiting to be uncovered through ingenuity and code.I find immense joy in coding and exploring the vast landscape of computer engineering. Whether I'm tackling complex algorithms, designing innovative solutions, or diving into the latest technologies, my motivation stems from the belief that every problem has a solution waiting to be uncovered through ingenuity and code.
 </p>
 <button
-  className='m-10 w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80'
+  className='w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80'
 >
 <span class="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
   Download
@@ -102,6 +102,28 @@ Hello, coding enthusiasts! I'm R.M.C.V Rajapaksha, an aspiring computer engineer
 
   
   </VerticalTimeline>
+</section>
+
+{/* Project Section*/}
+<section className=' flex flex-wrap items-center justify-evenly my-24 gap-4 p-20'>
+  <div className='border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out'>
+    <p className='text-lg text-textBase font-medium uppercase'>sample name </p>
+    <img src={May} className='w-full h-full object-cover rounded-md my-4'></img>
+    <div className='flex flex-1 items-center justify-between '>
+      <p className='text-lg text-gray-300'> technologies
+      <span className='block text-sm text-gray-500'>
+        nextJs,React
+
+        </span>
+        </p>
+        <a href=''>
+          <div className='text-textBase text-3xl cursor-pointer' >
+<IoLogoGithub/>
+          </div>
+        </a>
+    </div>
+  </div>
+
 </section>
 
 
