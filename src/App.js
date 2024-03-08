@@ -8,6 +8,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 
 import May from './images/may.jpg';
+import CV from './File/EE3253_L2_4733.pdf';
 import { Experience, Projects, SocialLinks ,Logo } from './data';
 
 
@@ -28,7 +29,7 @@ function App() {
             <a href="#skill" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>skills</a>
             <a href="#projects" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>Projects</a>
             <a href="#contact" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'>Contact</a>
-            <a href="#" className='ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border-textBase  border-2 px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out'>
+            <a href={CV} download='chamara_vishwajith' className='ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border-textBase  border-2 px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out'>
   Download
 </a>
 
@@ -54,7 +55,7 @@ function App() {
     <a href="#contact" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-out'  onClick={()=>setIsActive(false)}>Contact</a>
     <motion.a 
     whileTap={{scale:0.8}}
-    href="#" className='mx-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border-textBase border-2 px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out' onClick={() => setIsActive(false)}>
+    href={CV} download='chamara_vishwajith' className='mx-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border-textBase border-2 px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out' onClick={() => setIsActive(false)}>
   Download
 </motion.a>
   </motion.div>
