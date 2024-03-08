@@ -134,7 +134,7 @@ Hello, coding enthusiasts! I'm R.M.C.V Rajapaksha, an aspiring computer engineer
 
 {/*Contact Section*/}
 
-<section id="contact" className='flex flex-col items-center justify-center w-full my-24'>
+<section id="contact" className='flex flex-col items-center justify-center w-full my-24 p-20'>
   <p className=' text-2x1 text-gray-400 capitalize'> follow me </p>
   <div className='flex items-center justify-center w-full my-4 flex-wrap  gap-4'>
   {
