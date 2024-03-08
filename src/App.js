@@ -7,7 +7,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 
 import May from './images/may.jpg';
-import { Experience } from './data';
+import { Experience, Projects, SocialLinks } from './data';
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -105,27 +105,48 @@ Hello, coding enthusiasts! I'm R.M.C.V Rajapaksha, an aspiring computer engineer
 </section>
 
 {/* Project Section*/}
-<section className=' flex flex-wrap items-center justify-evenly my-24 gap-4 p-20'>
-  <div className='border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out'>
-    <p className='text-lg text-textBase font-medium uppercase'>sample name </p>
-    <img src={May} className='w-full h-full object-cover rounded-md my-4'></img>
-    <div className='flex flex-1 items-center justify-between '>
-      <p className='text-lg text-gray-300'> technologies
-      <span className='block text-sm text-gray-500'>
-        nextJs,React
+<section className=' flex flex-wrap items-center justify-evenly my-24 gap-4 p-20' id='projects'>
+ {Projects && Projects.map((n) => (
+   <div key={n.id} className='border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out'>
+   <p className='text-md text-textBase font-medium uppercase'>
+  {n.name.length > 25 ? `${n.name.slice(0, 25)}...` : n.name}
+</p>
 
-        </span>
-        </p>
-        <a href=''>
-          <div className='text-textBase text-3xl cursor-pointer' >
+   <img src={n.imageSrc} className='w-full h-full object-cover rounded-md my-4'></img>
+   <div className='flex flex-1 items-center justify-between '>
+     <p className='text-lg text-gray-300'>{n.techs}
+     <span className='block text-sm text-gray-500'>
+       nextJs,React
+
+       </span>
+       </p>
+       <a href={n.github}>
+         <div className='text-textBase text-3xl cursor-pointer' >
 <IoLogoGithub/>
-          </div>
-        </a>
-    </div>
+         </div>
+       </a>
+   </div>
+ </div>
+
+ ) )}
+</section>
+
+
+{/*Contact Section*/}
+
+<section id="contact" className='flex flex-col items-center justify-center w-full my-24'>
+  <p className=' text-2x1 text-gray-400 capitalize'> follow me </p>
+  <div className='flex items-center justify-center w-full my-4 flex-wrap  gap-4'>
+  {
+    SocialLinks && SocialLinks.map((n) => (  
+    <a key={n.id} href='#' className='w-full md:w-auto px-3 md:px-8 py-5 border border-x-zine-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3'>
+    {n.iconSrc}
+    <p className='text-lg text-textBase'>{n.name}</p>
+  </a>))
+  }
   </div>
 
 </section>
-
 
 
       </main>
