@@ -128,7 +128,7 @@ export const SocialLinks = [
     id: 1,
     iconSrc: <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />,
     name: "GitHub",
-    link: "#",
+    link: "",
   },
   {
     id: 1,
