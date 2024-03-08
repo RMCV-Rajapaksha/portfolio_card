@@ -8,7 +8,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 
 import May from './images/may.jpg';
-import { Experience, Projects, SocialLinks } from './data';
+import { Experience, Projects, SocialLinks ,Logo } from './data';
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -48,7 +48,7 @@ function App() {
 )}
         </div>
       </nav>
-      <div className='relative '>
+      <div className='relative ' id='home'>
         <Spline scene="https://prod.spline.design/pfqJo4JN2jZcqmt3/scene.splinecode" />
         <div className='absolute bottom-10 w-full justify-center items-center flex'>
           <div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl'>
@@ -60,6 +60,7 @@ function App() {
       {/*Main section*/}
 
       <main className='w-{80%} mt-5 '>
+
 {/*About section*/}
 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">About</h2>
 <section className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 my-24' id="about">
@@ -84,6 +85,23 @@ Hello, coding enthusiasts! I'm R.M.C.V Rajapaksha, an aspiring computer engineer
 </button>
 
 </div>
+</section>
+{/*skills section*/}
+
+<section className='flex flex-wrap items-center justify-evenly my-24 gap-4 pl-20 pr-20'>
+<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">I'm Familiar With</h2>
+<div className='flex flex-row flex-wrap justify-center gap-10 mt-8 mx-4 md:mx-16'>
+
+{Logo && Logo.map((index) => (
+    <div key={index} className='mx-auto border border-zinc-800 hover:border-zinc-600 shadow-lg rounded-lg overflow-hidden md:w-16 md:h-16 lg:w-20 lg:h-20 w-12 h-12 hover:scale-110 transition-transform'>
+    <img src={index.imageSrc} alt='' />
+  </div>
+))}
+
+
+ 
+</div>
+
 </section>
 
 {/*timeline section*/}

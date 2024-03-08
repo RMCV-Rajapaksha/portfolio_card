@@ -1,5 +1,22 @@
 
 import May from './images/may.jpg';
+import C from './images/c.png';
+import CSS from './images/css.png';
+import HTML from './images/html.png';
+import JS from './images/node-js.png';
+import React from './images/react.png';
+import Figma from './images/figma.png';
+import Tailwind from './images/tailwind-css.png';
+import Firebase from './images/firebase.png';
+import Flutter from './images/flutter.png';
+import Git from './images/git.png';
+import Java from './images/java.png';
+import Mongodb from './images/mongodb.png';
+import Mysql from './images/mysql.png';
+import Postman from './images/postman.png';
+import Python from './images/python.png';
+
+
 import {
   IoCodeWorking,
   IoLogoGithub,
@@ -143,4 +160,73 @@ export const SocialLinks = [
     name: "Whatsapp",
     link: "#",
   },
+];
+
+
+
+
+  
+export const Logo = [
+  {
+    id: 1,
+    imageSrc: C, 
+  },
+  {
+    id: 2,
+    imageSrc: CSS, 
+  },
+  {
+    id: 3,
+    imageSrc: HTML, 
+  },
+  {
+    id: 4,
+    imageSrc: JS, 
+  },
+  {
+    id: 5,
+    imageSrc: React, 
+  },
+  {
+    id: 6,
+    imageSrc: Figma, 
+  },
+  {
+    id: 7,
+    imageSrc: Tailwind, 
+  },
+  {
+    id: 8,
+    imageSrc: Firebase, 
+  },
+  {
+    id: 9,
+    imageSrc: Flutter, 
+  },
+  {
+    id: 10,
+    imageSrc: Git, 
+  },
+  {
+    id: 11,
+    imageSrc: Java, 
+  },
+  {
+    id: 12,
+    imageSrc: Mongodb, 
+  },
+  {
+    id: 13,
+    imageSrc: Mysql, 
+  },
+  {
+    id: 14,
+    imageSrc: Postman, 
+  },
+  {
+    id: 15,
+    imageSrc: Python, 
+  },
+  
+  
 ];
