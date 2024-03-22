@@ -85,9 +85,9 @@ function App() {
         </div>
       </nav>
       <div className='relative ' id='home'>
-        <Spline scene="https://prod.spline.design/pfqJo4JN2jZcqmt3/scene.splinecode" />
+      <Spline scene="https://prod.spline.design/j71eySYKUJBmN-Pu/scene.splinecode" />
         <div className='absolute bottom-10 w-full justify-center items-center flex'>
-          <div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl'>
+          <div className='shadow-md p-4 flex items-center justify-center bg-black rounded-3xl'>
             <p className='text-white'>Press and drag to orbit</p>
           </div>
         </div>
@@ -98,31 +98,38 @@ function App() {
       <main className='w-{80%} mt-5 '>
 
 {/*About section*/}
-<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">About</h2>
-<section className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 my-24' id="about">
-{/*image box*/}
-<div className='w-full h-470 flex items-center justify-center'>
-<div className='w-340 h-370 bg-emerald-200 rounded-md relative'>
-  <img className='w-full h-full absolute -right-4 top-4 object-cover rounded-lg shadow-lg' src={May} alt=""/>
-</div>
-</div>
-{/*content box*/}
-<div className='w-full h-470 flex flex-col items-center justify-center  p-10 md:pr-60'>
-<p className='text-lg text-textBase text-justify'>
-Hello, coding enthusiasts! I'm R.M.C.V Rajapaksha, an aspiring computer engineering undergraduate at the University of Ruhuna, and I'm delighted to share a bit about my coding journey with you.I'm a passionate coder who believes in the limitless possibilities of creative thinking and programming knowledge. Currently immersed in the world of computer engineering at the University of Ruhuna, my journey began with a curiosity to solve problems using the power of code.I find immense joy in coding and exploring the vast landscape of computer engineering. Whether I'm tackling complex algorithms, designing innovative solutions, or diving into the latest technologies, my motivation stems from the belief that every problem has a solution waiting to be uncovered through ingenuity and code.I find immense joy in coding and exploring the vast landscape of computer engineering. Whether I'm tackling complex algorithms, designing innovative solutions, or diving into the latest technologies, my motivation stems from the belief that every problem has a solution waiting to be uncovered through ingenuity and code.
-</p>
-<motion.button
-whileTap={{scale:0.8}}
-  className='w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80'
->
-<span class="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-  Download
-</span>
 
-</motion.button>
-
+<section class=" text-white ">
+<div>
+  <div class="flex h-screen items-center justify-center  p-5">
+    <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-10 md:px-10">
+      <div>
+        <h1 class="mb-2 text-3xl font-bold text-white"><span class="text-green-500">Hi,</span> I'm Full Stack Developer</h1>
+        <p class="mb-6 text-white">"Hello! I'm R.M.C.V Rajapaksha, a computer engineering student at the University of Ruhuna. My passion for coding stems from the belief in its limitless possibilities. Whether it's solving complex problems or exploring new technologies, I find joy in every challenge."</p>
+        <div class="flex justify-center space-x-5">
+          <button class="flex w-full items-center justify-center gap-1 rounded-2xl bg-rose-500 p-5 py-3 font-semibold text-white hover:bg-rose-700">
+            Follow
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+            </svg>
+          </button>
+          <button class="flex w-full items-center justify-center gap-2 rounded-2xl bg-white p-5 py-3 font-semibold">
+            Resume
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div>
+        <img src={May} alt="" class="md:size-96 size-72 rounded-full " />
+      </div>
+    </div>
+  </div>
 </div>
+
 </section>
+
 {/*skills section*/}
 
 <section className='flex flex-wrap items-center justify-evenly my-24 gap-4 pl-20 pr-20' id='skill'>
